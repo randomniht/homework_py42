@@ -75,3 +75,5 @@ print('Вторая машина')
 for i in range(4):
     car2.fast_drive(30)
 car2.competition()
+
+print('test')
