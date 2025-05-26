@@ -34,7 +34,26 @@ class CheckFile:
             a = f'required_fuel - {required_fuel}, distance - {distance} \n'
             f.write(a)
 class SportCar(Car):
-    def fast_drive(self):
+    def fast_drive(self,distance):
+        required_fuel = ((distance / 100) * self.fuel_consumption) * 1.5
+
+        if required_fuel <= self.fuel_amount:
+            self.fuel_amount -= required_fuel
+            self.mileage += distance
+            file_new = CheckFile()
+            file_new.write(required_fuel, distance)
+            print(f"Мы проехали {distance} км.")
+        else:
+            print("Не хватает топлива.")
+    def competition(self):
+        a = random.randint(0,1)
+        if a ==  0:
+            print('lose')
+        else:
+            print('win')
+
+
+
 
         
 
@@ -47,3 +66,12 @@ car.drive(10)
 car.get_mileage()
 car.print_color('Зеленый')
 car.print_color('Черный')
+car1 = Car(color_car='черный', fuel_amount=8, fuel_consumption=8)
+car2 = SportCar(color_car='черный', fuel_amount=8,fuel_consumption=8)
+print('Первая машина')
+for i in range(4):
+        car1.drive(30)
+print('Вторая машина')
+for i in range(4):
+    car2.fast_drive(30)
+car2.competition()
