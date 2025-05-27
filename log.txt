@@ -1,0 +1,8 @@
+required_fuel - 50.0, distance - 50 
+required_fuel - 30.0, distance - 30 
+required_fuel - 10.0, distance - 10 
+required_fuel - 2.4, distance - 30 
+required_fuel - 2.4, distance - 30 
+required_fuel - 2.4, distance - 30 
+required_fuel - 3.5999999999999996, distance - 30 
+required_fuel - 3.5999999999999996, distance - 30 
